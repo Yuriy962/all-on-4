@@ -1,0 +1,42 @@
+.header{
+    background-color: #F2F4F7;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 3px -1px 4px rgba(0,0,0,0.5);
+    &__inner{
+        padding: 12px 0;
+        position: relative;
+        a {
+            color: $text-color;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media (max-width: 991px){
+        &__content{
+            padding: 10px 20px;
+            min-height: 47px;
+            background-color: $grey;
+            position: absolute;
+            bottom: -45px;
+            left: 0;
+            width: 100vw;
+        }
+        &__btn{
+            display: none;
+        }
+    }
+    @media (max-width: 575px){
+        
+    }
+}

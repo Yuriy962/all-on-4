@@ -1,0 +1,53 @@
+<article class="contacts bg--lightpink">
+    <div class="contacts__inner bg-lines" id="contacts">
+        <div class="container">
+            <div class="contacts__content">
+                <section class="contacts__form">
+                    <form class="form form-inline" method="POST" id="contacts__form">
+                        <h2 class="title title--contacts contacts__title">
+                            Запишитесь на прием в удобное для Вас время!
+                        </h2>
+                        <div class="form__row">
+                            <input class="form__input w-100" type="text" name="name" id="name" placeholder="Ваше имя"
+                                required>
+                        </div>
+                        <div class="form__row">
+                            <input class="form__input w-100" type="tel" name="tel" id="tel"
+                                placeholder="Ваш номер телефона" required>
+                        </div>
+                        <div class="form__row">
+                            <input type="submit" value="Записаться на прием" class="btn contacts__btn">
+                        </div>
+        
+                        <label class="text-black">
+                            <p>Ввод номера телефона подтверждает ваше согласие с 
+                                <a data-fancybox class="policy popup" href="#policy">
+                                    Политикой конфиденциальности
+                                </a>
+                            </p>
+                        </label>
+                    </form>
+                </section>
+                <section class="contacts__map">
+                    <div id="YaMap"></div>
+                    <div class="contacts__info">
+                        <header>
+                            <h3 class="contacts__heading">
+                                Контакты
+                            </h3>
+                        </header>
+                        <footer class="contacts__links">
+                            <a href="tel:88462427171" class="phone contacts__link contacts__phone">
+                                8 (846) 242-71-71
+                            </a>
+                            <a class="mail contacts__link contacts__mail" href="malito:ortoprof@rambler.ru">
+                                ortoprof@rambler.ru
+                            </a>
+                            <address class="contacts__text contacts__address">Ленинская улица, 206</address>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</article>
