@@ -5,19 +5,22 @@
         background-color: $lightgrey;
     }
     &__info{
-        padding: 90px 15px 90px 0;
+        padding: 130px 15px 90px 0;
     }
     &__suptitle{
         margin-bottom: 30px;
+        text-transform: uppercase;
     }
     &__title{
         margin-bottom: 20px;
     }
     &__text{
         margin: 20px 0;
+        line-height: 170%;
     }
     &__btn{
         margin-top: 50px;
+        letter-spacing: 0.05em;
     }
     &__banner{
         position: relative;
@@ -52,6 +55,9 @@
     @media (max-width: 1400px){
         &__inner{
             min-height: 650px;
+        }
+        &__suptitle{
+            margin-bottom: 20px;
         }
         &__info {
             padding: 60px 15px 60px 0;

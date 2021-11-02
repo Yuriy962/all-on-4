@@ -36,11 +36,11 @@ $(window).on('load', () => {
         adaptiveHeight: true,
         prevArrow: 
         '<button type="button" class="slick-arrow slick-prev">' +
-            '<img src="../icons/arrow.png" alt="arrow">' +
+            '<img src="icons/arrow.png" alt="arrow">' +
         '</button>',
         nextArrow: 
         '<button type="button" class="slick-arrow slick-next">'+
-            '<img src="../icons/arrow.png" alt="arrow">' +
+            '<img src="icons/arrow.png" alt="arrow">' +
         '</button>',
          responsive: [
              {
@@ -64,36 +64,36 @@ $(window).on('load', () => {
         let form = $(this);
         formContent = 
         '<h2 class="title title--popup text-center"> Спасибо, наш менеджер свяжется с Вами в ближайшее время </h2>' + 
-            '<h3 class="text form-popup__text text-center">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/">ortoprof.ru</a> </h3>' + 
+            '<h3 class="text form-popup__text text-center">А пока можете ознакомится с другими нашими услугами на сайте <a style="color: #e35191" target="_blank" href="https://ortoprof.ru/">ortoprof.ru</a> </h3>' + 
             '<div class="form__row form-popup__row">' +
-            '<a class="btn form-popup__btn text-white" href="https://ortoprof.ru/" style="padding: 0">Перейти на сайт</a>' + 
+            '<a class="btn form-popup__btn text-white" target="_blank" href="https://ortoprof.ru/" style="color: #e35191;padding: 0">Перейти на сайт</a>' + 
         '</div>';
         console.log('success');
         form[0].innerHTML = formContent;
     }));
 
     // Отправка формы
-    $("form").on("submit", (function (e) {
-        e.preventDefault();
-        let form = $(this);
-        return $.ajax({
-            type: "POST",
-            url: "send.php",
-            data: $(this).serialize(),
-            success: function (e) {
-                e = JSON.parse(e);
-                formContent = 
-                '<h2 class="title text-center form-popup__title"> Спасибо, наш менеджер свяжется с Вами в ближайшее время </h2>' + 
-                    '<h3 class="subtitle text-center form-popup__subtitle">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/" style="color: #e35191">ortoprof.ru</a> </h3>' + 
-                    '<div class="form__row form-popup__row">' +
-                    '<a class="btn form-popup__btn text-white" href="https://ortoprof.ru/" style="padding: 0">Перейти на сайт</a>' + 
-                '</div>';
-                console.log('success');
-                form[0].innerHTML = formContent;
-                form.find("input[type='name'], input[type='tel']").val(""), $("form").trigger("reset");
-            }
-        });
-    }));
+    // $("form").on("submit", (function (e) {
+    //     e.preventDefault();
+    //     let form = $(this);
+    //     return $.ajax({
+    //         type: "POST",
+    //         url: "send.php",
+    //         data: $(this).serialize(),
+    //         success: function (e) {
+    //             e = JSON.parse(e);
+    //             formContent = 
+    //             '<h2 class="title text-center form-popup__title"> Спасибо, наш менеджер свяжется с Вами в ближайшее время </h2>' + 
+    //                 '<h3 class="subtitle text-center form-popup__subtitle">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/" target="_blank" style="color: #e35191">ortoprof.ru</a> </h3>' + 
+    //                 '<div class="form__row form-popup__row">' +
+    //                 '<a class="btn form-popup__btn text-white" href="https://ortoprof.ru/" target="_blank" style="padding: 0">Перейти на сайт</a>' + 
+    //             '</div>';
+    //             console.log('success');
+    //             form[0].innerHTML = formContent;
+    //             form.find("input[type='name'], input[type='tel']").val(""), $("form").trigger("reset");
+    //         }
+    //     });
+    // }));
 
     $().fancybox();
 

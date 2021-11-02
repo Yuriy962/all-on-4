@@ -65,7 +65,19 @@ input{
 		}
 	}
 }
+@keyframes pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+	}
 
+	70% {
+		-webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+	}
+
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
 /*end fancybox*/
 @import "buttons";
 @import "mixins";
@@ -304,7 +316,7 @@ input{
 	&__content{
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: flex-start;
 		max-width: 660px;
 	}
 	@media (max-width: 991px){
@@ -343,12 +355,17 @@ input{
 	}
 	&--main{
 		font-size: 72px;
+		margin-bottom: 0;
 	}
 	span{
 		color: $pink;
+		font-family: 'Prata', serif;
 	}
 	&:not(.title--main){
 		margin-bottom: 60px;
+	}
+	&--estimate {
+		margin-bottom: 20px;
 	}
 	@media (max-width: 1400px){
 		&--main{
